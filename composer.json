@@ -1,0 +1,17 @@
+{
+    "name": "ychabaniuk/slack",
+    "description": "Simple API to comunicate with Slack",
+    "authors": [
+        {
+            "name": "Yuriy Chabaniuk",
+            "email": "y.chabaniuk@grt-team.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ychabaniuk\\Slack\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
