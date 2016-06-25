@@ -25,7 +25,11 @@ class IncomingWebHook {
     }
 
     public function icon($value) {
-        $this->message->config('icon', $value);
+        $this->message->config('icon', $value, function ($key, $value) {
+            if ($key === 'icon') {
+                $this->setIconType($value);
+            }
+        });
 
         return $this;
     }
