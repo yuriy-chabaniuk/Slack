@@ -52,4 +52,8 @@ class Message {
 
         return $message;
     }
+
+    public function toArray() {
+        return array_filter($this->configs);
+    }
 }
