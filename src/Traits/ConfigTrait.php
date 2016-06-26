@@ -12,12 +12,30 @@ trait ConfigTrait {
         } else {
             if (is_callable($callback)) {
                 $newCallback = $callback->bindTo($this, $this);
-                $newCallback($key, $value);
+                $preventDefault = $newCallback($key, $value);
             }
 
-            $this->configs[$key] = $value;
+            if ($preventDefault !== true) {
+                $this->configs[$key] = $value;
+            }
         }
 
         return $result;
+    }
+
+    public function push($key, $value) {
+        if (!is_array($this->config($key))) {
+            $this->config($key, []);
+        }
+
+        $array = $this->config($key);
+
+        array_push($array, $value);
+
+        $this->config($key, $value);
+    }
+
+    public function exists($key) {
+        return !empty($this->config($key));
     }
 }
