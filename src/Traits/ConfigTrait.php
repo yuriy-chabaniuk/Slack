@@ -32,7 +32,7 @@ trait ConfigTrait {
 
         array_push($array, $value);
 
-        $this->config($key, $value);
+        $this->config($key, $array);
     }
 
     public function exists($key) {
