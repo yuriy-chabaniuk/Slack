@@ -41,6 +41,10 @@ class Attachment {
         return $this;
     }
 
+    public static function make($configs) {
+        return new static($configs);
+    }
+
     public function toArray() {
         return array_filter($this->configs);
     }

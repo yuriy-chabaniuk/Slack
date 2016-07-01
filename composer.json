@@ -1,6 +1,7 @@
 {
     "name": "ychabaniuk/slack",
-    "description": "Simple API to comunicate with Slack",
+    "description": "Simple API to communicate with Slack",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "Yuriy Chabaniuk",

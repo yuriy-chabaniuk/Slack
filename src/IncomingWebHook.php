@@ -8,7 +8,11 @@ class IncomingWebHook {
 
     protected $response;
 
+    protected $endpoint;
+
     public function __construct($endpoint, array $configs = array()) {
+        $this->endpoint = $endpoint;
+
         $this->message = Message::make($configs);
     }
 
